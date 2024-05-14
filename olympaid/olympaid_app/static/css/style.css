@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 13px !important;
+    padding: 0%;
+    margin: 0%;
+}
+
+
+header {
+    background-image: url('../images/Group.png');
+    background-size: cover;
+}
+
+.header_foot {
+    background-image: url('../images/foot.png');
+    background-size: cover;
+}
+
+.image{
+    max-height: 161px;
+    max-width: 115px;
+}
+
+
+
+

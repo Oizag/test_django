@@ -1,0 +1,337 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="text-white banner pt-5 min-vh-100">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <a href="#"><img src="{% static "images\logo_3.png" %}" alt=""></a>
+                </div>
+            </div>
+
+            <div class="row flex-column flex-md-row">
+                <div class="col py-5">
+                    <h1 class="fw-bolder">Международная научно-практическая онлайн-олимпиада</h1>
+                    <a href="{% url 'olympaid:register' %}" class="btn btn-primary fw-bold py-3 px-5 mt-5">Принять участие</a>
+                </div>
+
+                <div class="col">
+                    <img src="{% static "images\People.png" %}" alt="" class="w-100">
+                </div>
+            </div>
+
+            <div class="row flex-column flex-md-row mt-5">
+                <div class="col-4 col-mb-5">
+                    <p class="fw-bold">Место проведения онлайн-олимпиады:</p>
+                </div>
+                <div class="col-8 col-mb-7">
+                    <p>Ростовский государственный экономический университет (РИНХ), Точка кипения РГЭУ (РИНХ) г. Ростов-на-Дону, ул. Б. Садовая, 69</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="info bg-white py-5" style="color: #3444B8;">
+        <div class="info_block container w-75 mb-5">
+            <div class="row info_block_header">
+                <h3 class="mb-5">Олимпиада включает два этапа, проводимые в заочной форме с применением дистанционных образовательных технологий:</h3>
+                <div class="col fs-4 info_block_header_text">
+                    <p>Первый этап представляет собой отборочный тур и предполагает выполнение индивидуальных тестовых заданий. Все участники первого этапа Олимпиады получают Сертификат установленного образца.</p>
+                </div>
+                <div class="col fs-4">
+                    <p>Второй этап к участию допускаются участники Первого этапа Олимпиады, набравшие наибольшее количество баллов. Второй этап предполагает выполнение индивидуальных тестовых заданий повышенного уровня сложности и решение кейс-задания.</p>
+                    <div class="row mt-5">
+                        <div class="col">
+                            <p>Победители Второго этапа Олимпиады получают Дипломы Победителей (1-е, 2-е и 3-е место).</p>
+                        </div>
+                        <div class="col">
+                            <p>Участники, набравшие наибольшее количество баллов после победителей, получают Дипломы Лауреатов.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container targets text-center mb-5">
+            <h2 class="fw-bold fs-1 mb-5">Цели</h2>
+            <nav>
+                <ul class="nav nav-tabs d-flex justify-content-center">
+                    <li class="nav-item">
+                        <button class="nav-link active custom-tab" id="nav-1-tab" data-bs-toggle="tab" data-bs-target="#nav-creativity" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Творческие способности</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link custom-tab" id="nav-2-tab" data-bs-toggle="tab" data-bs-target="#nav-special" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Одаренные дети</button>                   
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link custom-tab" id="nav-3-tab" data-bs-toggle="tab" data-bs-target="#nav-knowledge" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Научные знания</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link custom-tab" id="nav-4-tab" data-bs-toggle="tab" data-bs-target="#nav-orientation" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Профессиональная ориентация</button>                    
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link custom-tab" id="nav-5-tab" data-bs-toggle="tab" data-bs-target="#nav-talant" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Талантливая молодежь</button>                   
+                    </li>   
+                </ul>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-creativity" role="tabpanel" aria-labelledby="nav-1-tab">
+                    <div class="container position-relative bg-white mt-5 p-3 goals-card w-50 shadow p-3 mb-5 bg-body rounded">
+                        <img src="{% static "images/skills.png" %}" alt="" class="goals-box-img position-absolute top-0 start-0 translate-middle">
+                        <h5 class="goals-box-header">Творческие способности</h5> 
+                        <p class="goals-box-text">Выявление и развитие у учащихся, осваивающих общеобразовательные программы основного общего и среднего общего образования, творческих способностей и интереса к научно-исследовательской деятельности</p>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-special" role="tabpanel" aria-labelledby="nav-2-tab">
+                    <div class="container position-relative bg-white mt-5 p-3 goals-card w-50 shadow p-3 mb-5 bg-body rounded">
+                        <img src="{% static "images/skills.png" %}" alt="" class="goals-box-img position-absolute top-0 start-0 translate-middle"> 
+                        <h5 class="goals-box-header">Одаренные дети</h5> 
+                        <p class="goals-box-text">Создание среды для поддержки одаренных детей</p>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-knowledge" role="tabpanel" aria-labelledby="nav-3-tab">
+                    <div class="container position-relative bg-white mt-5 p-3 goals-card w-50 shadow p-3 mb-5 bg-body rounded">
+                        <img src="{% static "images/skills.png" %}" alt="" class="goals-box-img position-absolute top-0 start-0 translate-middle"> 
+                        <h5 class="goals-box-header">Научные знания</h5> 
+                        <p class="goals-box-text">Распространение и популяризация научных знаний среди молодежи</p>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-orientation" role="tabpanel" aria-labelledby="nav-4-tab">
+                    <div class="container position-relative bg-white mt-5 p-3 goals-card w-50 shadow p-3 mb-5 bg-body rounded">
+                        <img src="{% static "images/skills.png" %}" alt="" class="goals-box-img position-absolute top-0 start-0 translate-middle"> 
+                        <h5 class="goals-box-header">Профессиональная ориентация</h5> 
+                        <p class="goals-box-text">Профессиональная ориентация молодежи на ранних стадиях обучения</p>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-talant" role="tabpanel" aria-labelledby="nav-5-tab">
+                    <div class="container position-relative bg-white mt-5 p-3 goals-card w-50 shadow p-3 mb-5 bg-body rounded">
+                        <img src="{% static "images/skills.png" %}" alt="" class="goals-box-img position-absolute top-0 start-0 translate-middle"> 
+                        <h5 class="goals-box-header">Талантливая молодежь</h5> 
+                        <p class="goals-box-text">Привлечение талантливой молодежи к продолжению обучения в высших учебных заведениях Российской Федерации</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-center mb-5">
+            <div class="row">
+                <h2 class="fw-bold fs-1">Программный комитет команды</h2>
+            </div>
+            <div class="container mt-5">
+                <div class="row mb-4">
+                    <div class="col">
+                        <div class="card__item">
+                            <div class="card__image">
+                                <img src="{% static "images/Boev.png" %}" alt="" class="image">
+                            </div>
+                            <div class="card__name mb-3">
+                                <p class="fs-5 fw-bold">Боев Василий Юрьевич</p>
+                            </div>
+                            <div class="card__description">
+                                <p>проректор по учебной работе РГЭУ (РИНХ), заведующий кафедрой экономики региона, отраслей и предприятий РГЭУ (РИНХ), к.э.н., доцент.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card__item">
+                            <div class="card__image">
+                                <img src="{% static "images/Zhebrovskaya.png" %}" alt="" class="image">
+                            </div>
+                            <div class="card__name mb-3">
+                                <p class="fs-5 fw-bold">Жебровская Людмила Анатольевна<p>
+                            </div>
+                            <div class="card__description">
+                                <p>начальник Управления компьютеризации учебной и административной деятельности РГЭУ (РИНХ), к.э.н., доцент</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card__item">
+                            <div class="card__image">
+                                <img src="{% static "images/Molchanov.png" %}" alt="" class="image">
+                            </div>
+                            <div class="card__name mb-3">
+                                <p class="fs-5 fw-bold">Молчанов Евгений Григорьевич</p>
+                            </div>
+                            <div class="card__description">
+                                <p>декан факультета Экономики и финансов РГЭУ (РИНХ), к.э.н.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card__item">
+                            <div class="card__image">
+                                <img src="{% static "images/Andreeva.png" %}" alt="" class="image">
+                            </div>
+                            <div class="card__name mb-3">
+                                <p class="fs-5 fw-bold">Андреева Ольга Валентиновна</p>
+                            </div>
+                            <div class="card__description">
+                                <p>руководитель Центра стратегических исследований социально-экономического развития Юга России</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card__item">
+                            <div class="card__image">
+                                <img src="{% static "images/Romanova.png" %}" alt="" class="image">
+                            </div>
+                            <div class="card__name mb-3">
+                                <p class="fs-5 fw-bold">Романова Татьяна Федоровна</p>
+                            </div>
+                            <div class="card__description">
+                                <p>заведующий кафедрой финансов РГЭУ (РИНХ), д.э.н., профессор</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card__item">
+                            <div class="card__image">
+                                <img src="{% static "images/Semenuta.png" %}" alt="" class="image">
+                            </div>
+                            <div class="card__name mb-3">
+                                <p class="fs-5 fw-bold">Семенюта Ольга Гетовна<p>
+                            </div>
+                            <div class="card__description">
+                                <p>заведующий кафедрой банковского дела РГЭУ (РИНХ), д.э.н., профессор</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card__item">
+                            <div class="card__image">
+                                <img src="{% static "images/Medvedkina.png" %}" alt="" class="image">
+                            </div>
+                            <div class="card__name mb-3">
+                                <p class="fs-5 fw-bold">Медведкина Евгения Александровна</p>
+                            </div>
+                            <div class="card__description">
+                                <p>заведующий кафедрой мировой экономики РГЭУ (РИНХ), д.э.н., доцент</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card__item">
+                            <div class="card__image">
+                                <img src="{% static "images/Musaelyan.png" %}" alt="" class="image">
+                            </div>
+                            <div class="card__name mb-3">
+                                <p class="fs-5 fw-bold">Мусаелян Анжелика Капреловна</p>
+                            </div>
+                            <div class="card__description">
+                                <p>заведующий кафедрой налогов и налогообложения РГЭУ (РИНХ), к.э.н., доцент</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="galery container-fluid">
+            <div class="row text-center mb-5">
+                <h2 class="fw-bold fs-1">Фотогалерея</h2>
+            </div>
+            <div class="container-fluid p-0 m-0 g-0 text-center">
+                <div class="row d-flex justify-content-between p-0 m-0 g-0">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                        <img src="{% static 'images/gal_1.png' %}" alt="" class="mw-100">
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                        <img src="{% static 'images/gal_2.png' %}" alt="" class="mw-100">
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                        <img src="{% static 'images/gal_3.png' %}" alt="" class="mw-100">
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                        <img src="{% static 'images/gal_2.png' %}" alt="" class="mw-100">
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                        <img src="{% static 'images/gal_3.png' %}" alt="" class="mw-100">
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-between p-0 m-0 g-0">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                        <img src="{% static 'images/gal_2.png' %}" alt="" class="mw-100">
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                        <img src="{% static 'images/gal_3.png' %}" alt="" class="mw-100">
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                        <img src="{% static 'images/gal_2.png' %}" alt="" class="mw-100">
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                        <img src="{% static 'images/gal_3.png' %}" alt="" class="mw-100">
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                        <img src="{% static 'images/gal_1.png' %}" alt="" class="mw-100">
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-between p-0 m-0 g-0">
+                    <div class="col-md-2 col-sm-3 col-6">
+                        <img src="{% static 'images/gal_1.png' %}" alt="" class="mw-100">
+                    </div>
+                    <div class="col-md-2 col-sm-3 col-6">
+                        <img src="{% static 'images/gal_2.png' %}" alt="" class="mw-100">
+                    </div>
+                    <div class="col-md-2 col-sm-3 col-6">
+                        <img src="{% static 'images/gal_3.png' %}" alt="" class="mw-100">
+                    </div>
+                    <div class="col-md-2 col-sm-3 col-6">
+                        <img src="{% static 'images/gal_2.png' %}" alt="" class="mw-100">
+                    </div>
+                    <div class="col-md-2 col-sm-3 col-6">
+                        <img src="{% static 'images/gal_3.png' %}" alt="" class="mw-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    </div>
+
+    <footer class="footer" style="color: #4340C9">
+        <div class="contacts container-fluid text-center">
+            <div class="row mb-5">
+                <h2 class="fw-bold fs-1">Контакты</h2>
+            </div>
+            <div class="row" style="color: white">
+                <div class="col-8 px-3 pt-4" style="background-color: #4340C9">
+                    <div class="container">
+                        <p class="fw-bold fs-6">г. Ростов-на-Дону, ул. Б. Садовая, 69</p>
+                        <p>Ростовский государственный экономический университет (РИНХ)</p>
+                        <p class="fs-6">Точка кипения РГЭУ (РИНХ)</p>
+                    </div>
+                </div>
+                <div class="col-4 bg-primary px-3 pt-4">
+                    <div class="container">
+                        <p class="fw-bold fs-4">+7 (863) 345-40-40</p>
+                        <p class="fs-5">fnauka@bk.ru</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 p-0">
+                    <div class="contact-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2709.6904289973786!2d39.71591351552213!3d47.222639279161044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3b912d1b908fb%3A0xf448c3f26e7c8247!2z0KDQmNCd0KU!5e0!3m2!1sru!2sru!4v1605473512197!5m2!1sru!2sru" width="100%" height="560px" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
